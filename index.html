@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo João Gabriel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>João Gabriel</h1>
+    <h3>(Analista de Sistemas)</h3>
+    <img src="467184269_1859029391293360_2533325460748455428_n.jpg" alt="Foto de João Gabriel" style="width: 300px; height: auto;">
+
+    <nav>
+        <h2>
+            <a href="identificacao.html" target="main">Identificação</a> |
+            <a href="formacao.html" target="main">Formação</a> |
+            <a href="experiencia.html" target="main">Experiência Profissional</a> |
+            <a href="skills.html" target="main">Habilidades</a> |
+            <a href="endereco.html" target="main">Endereço</a>
+        </h2>
+    </nav>
+    
+    <iframe name="main" src="identificacao.html"></iframe>
+
+    <h2>Contato</h2>
+    <form id="contato-form">
+        <label>Nome:</label>
+        <input type="text" name="nome" required>
+
+        <label>Sobrenome:</label>
+        <input type="text" name="sobrenome" required>
+
+        <label>Telefone:</label>
+        <input type="tel" name="telefone" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(99) 99999-9999" required>
+
+        <label>E-mail:</label>
+        <input type="email" name="email" required>
+
+        <label>Mensagem:</label>
+        <textarea name="mensagem" rows="4" required></textarea>
+
+        <label>Idioma:</label>
+        <select name="idioma">
+            <option value="pt">Português (pt-br)</option>
+            <option value="en">Inglês</option>
+            <option value="es">Espanhol</option>
+            <option value="fr">Francês</option>
+        </select>
+
+        <label>Upload de protótipo (PDF, DOC, DOCX, JPEG, PNG):</label>
+        <input type="file" name="prototipo" accept=".pdf, .doc, .docx, .jpeg, .jpg, .png">
+
+        <label>Linguagens preferidas (múltipla escolha):</label>
+        <select name="linguagens" multiple>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="javascript">JavaScript</option>
+            <option value="csharp">C#</option>
+        </select>
+
+        <label>Banco de dados recomendado:</label><br>
+        <input type="radio" name="banco" value="mysql"> MySQL
+        <input type="radio" name="banco" value="postgres"> PostgreSQL
+        <input type="radio" name="banco" value="mongodb"> MongoDB<br><br>
+
+        <label>Turno para reuniões:</label>
+        <select name="turno">
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+        </select>
+
+        <label>Melhor horário sugerido:</label>
+        <input type="time" name="horario">
+
+        <label>Previsão de entrega desejada:</label>
+        <input type="date" name="data_entrega">
+
+        <button type="reset">Limpar</button>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <footer>
+        <p>Desenvolvido por João Gabriel Pinto Nogueira Santos</p>
+    </footer>
+
+    <script>
+        document.getElementById('contato-form').addEventListener('submit', function(event) {
+            if (!this.checkValidity()) {
+                event.preventDefault();
+                alert('Por favor, preencha todos os campos corretamente antes de enviar.');
+            } else {
+                alert('Formulário enviado com sucesso!');
+            }
+        });
+    </script>
+</body>
+</html>
