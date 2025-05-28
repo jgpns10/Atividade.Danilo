@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>João Gabriel</h1>
+    <h1 id="nomeComp">João Gabriel</h1>
     <h3>(Analista de Sistemas)</h3>
     <img src="467184269_1859029391293360_2533325460748455428_n.jpg" alt="Foto de João Gabriel" style="width: 300px; height: auto;">
 
@@ -85,15 +85,6 @@
         <p>Desenvolvido por João Gabriel Pinto Nogueira Santos</p>
     </footer>
 
-    <script>
-        document.getElementById('contato-form').addEventListener('submit', function(event) {
-            if (!this.checkValidity()) {
-                event.preventDefault();
-                alert('Por favor, preencha todos os campos corretamente antes de enviar.');
-            } else {
-                alert('Formulário enviado com sucesso!');
-            }
-        });
-    </script>
+    <script src="ola.js"></script>
 </body>
 </html>
